@@ -6,6 +6,11 @@ let game = setInterval(gameInit, 100)
 
 let direction = ''
 
+let food = {
+    x: Math.floor(Math.random() * 15 + 1 ) * box,
+    y: Math.floor(Math.random() * 15 + 1 ) * box,
+}
+
 let snake = []
 snake[0] = {
     x: 8 * box,
@@ -37,9 +42,15 @@ function update(event) {
 
 } 
 
+function spawnFood () {
+    context.fillStyle = 'red'
+    context.fillRect(food.x, food.y, box, box)
+}
+
 function gameInit() {
     createBg()
     snakeInit()
+    spawnFood()
 
     if (snake[0].x > 15 * box && direction == 'right') snake[0].x = 0
     if (snake[0].x < 0 && direction == 'left') snake[0].x = 16 * box
@@ -62,4 +73,5 @@ function gameInit() {
 
     snake.pop()
     snake.unshift(newHead)
+
 }

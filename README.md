@@ -6,7 +6,8 @@ Projeto do conhecido jogo da cobrinha em JavaScript, o projeto até o momento s�
 
 ## imagens do projeto
 <p align="center">
-<img src="./src/images/screenshot.gif">
+<img src="./src/images/Animação.gif">
+</p>
 
 ## Tecnologias utilizadas
 
